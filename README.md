@@ -1,0 +1,1 @@
+# smartdoctor-medium
