@@ -1,1 +1,1 @@
-# smartdoctor-medium
+# dev-blog
