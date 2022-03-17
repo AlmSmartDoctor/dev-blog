@@ -14,6 +14,9 @@
 
 [https://musma.github.io/2019/09/30/github-package-registry.html](https://musma.github.io/2019/09/30/github-package-registry.html)
 
+
+기존에 사내에서 Git Submodule로 사용하던 공통 모듈을 Nuget Package로 이관했던 경험을 나누고자 한다.
+
 이전 사유
 
 1. git submodule의 경우 두 repository에 대해서 최신 버전 관리가 귀찮음. (클릭 몇 번 더하고 안하고 이긴 한데 진짜 귀찮음)
@@ -24,6 +27,8 @@
     - life cycle이 다른데 항상 최신 버전으로 유지해야 함, 여기는 1.0 저기는 1.1 이런 상황은 있을 수 없음
 
 TODO git submodule flow 추가
+
+이제 실제 진행했던 과정을 자세하기 설명해보겠습니다:)
 
 ## Github Package 사용하기
 
@@ -83,7 +88,7 @@ Scope : write:packages, read:packages
 
 ### Package로 변경하기 좋은 부분
 
-박진영 연구원이 주로 사용하는 SmartMQ, SmartChartServer 에서 package로 바꿀만한 부분
+모바일 파트에서 주로 사용하는 SmartMQ, SmartChartServer 에서 package로 바꿀만한 부분
 
 Common_SmartDoctor repository에 적당한 파일이 있어서 이 클래스를 패키지로 변경하기로 했다.
 
