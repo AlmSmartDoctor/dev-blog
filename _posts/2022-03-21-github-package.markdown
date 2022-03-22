@@ -90,7 +90,7 @@ Scope : write:packages, read:packages
 
 ### Github Nuget Package로 옮긴 패키지들
 
-![Untitled](/assets/github_packages_21.png)
+![Untitled](/assets/images/github_packages_21.png)
 
 
 ### Package로 변경하기 좋은 부분
@@ -127,7 +127,7 @@ dotnet core 라이브러리로 생성하면 csproj 파일이 수정하기 편하
 
 패키지도 MyProject1 이렇게 생긴다.
 
-![Untitled1](/assets/github_packages_1.png)
+![Untitled1](/assets/images/github_packages_1.png)
 
 밑줄 친 Newtonsoft.Json, Microsoft.Extensions.DependencyInjection 이런게 다 프로젝트 이름이고 패키지 이름이다.
 
@@ -153,11 +153,11 @@ NetworkUtil니까 Util로 하려고 한다. 사실 이름은 원하는 걸로 �
 
 이유는 사실 몰라요
 
-![Untitled](/assets/github_packages_2.png)
+![Untitled](/assets/images/github_packages_2.png)
 
 나랑 비슷한 친구들이 많다.
 
-![Untitled](/assets/github_packages_3.png)
+![Untitled](/assets/images/github_packages_3.png)
 
 생성하면 Class1.cs가 달린 라이브러리 하나가 생긴다.
 
@@ -230,17 +230,17 @@ NetworkUtil를 복사해서 SmartDoctor.Util 으로 복사한다.
 
 싱글턴 부분 정리하고 camelcase로 변경했다. 
 
-![Untitled](/assets/github_packages_4.png)
+![Untitled](/assets/images/github_packages_4.png)
 
 이런 식으로 패키지니까 메서드 참조가 없어서 회색처리 뜨는게 불편하고 나중에 본인이 착각하고 막 지울 것 같다 싶으면
 
-![Untitled](/assets/github_packages_5.png)
+![Untitled](/assets/images/github_packages_5.png)
 
 resharper에 이런 기능도 있다.
 
-![Untitled](/assets/github_packages_6.png)
+![Untitled](/assets/images/github_packages_6.png)
 
-![Untitled](/assets/github_packages_7.png)
+![Untitled](/assets/images/github_packages_7.png)
 
 이제 이 프로젝트에 아까 쓰려고 헀던 NetworkUtil를 넣으면 된다.
 
@@ -248,7 +248,7 @@ resharper에 이런 기능도 있다.
 
 그냥 Release로 바꾸고 프로젝트 우클릭 - 팩 해도 좋고
 
-![Untitled](/assets/github_packages_8.png)
+![Untitled](/assets/images/github_packages_8.png)
 
 csproj 있는 폴더 찾아가서 powershell 켜고 다음 커맨드 입력해도 좋다
 
@@ -260,7 +260,7 @@ dotnet pack --configuration Release
 
 그러면 release폴더에 nupkg 파일이 생긴다.
 
-![Untitled](/assets/github_packages_9.png)
+![Untitled](/assets/images/github_packages_9.png)
 
 TODO 아까 만든 프로젝트 이름 + 버전 + .nupkg 자동으로 만들어 진다는 설명 추가
 
@@ -289,15 +289,15 @@ dotnet nuget push .\SmartDoctor.Util.1.0.0.nupkg --source "github"
 
 비포
 
-![Untitled](/assets/github_packages_10.png)
+![Untitled](/assets/images/github_packages_10.png)
 
 에프터
 
-![Untitled](/assets/github_packages_11.png)
+![Untitled](/assets/images/github_packages_11.png)
 
 networkutil이 없는 submodule은 따로 branch를 만들어서 develop 관리를 해준다.
 
-![Untitled](/assets/github_packages_12.png)
+![Untitled](/assets/images/github_packages_12.png)
 
 submodule을 해제하고 나면 이렇게 참조가 없어서 오류가 뜬다.
 
@@ -305,21 +305,21 @@ submodule을 해제하고 나면 이렇게 참조가 없어서 오류가 뜬다.
 
 이제 visual studio에서 도구 - Nuget 패키지 관리자 
 
-![Untitled](/assets/github_packages_13.png)
+![Untitled](/assets/images/github_packages_13.png)
 
-![Untitled](/assets/github_packages_14.png)
+![Untitled](/assets/images/github_packages_14.png)
 
 여기 보면 github가 있을 것이다. 아까 nuget.config에서 key=”github” 이부분이 이부분이다.
 
 이름 커스텀 하고 싶으면 해도 된다.
 
-![Untitled](/assets/github_packages_15.png)
+![Untitled](/assets/images/github_packages_15.png)
 
 아무튼 패키지 소스를 github로 바꿔주면 내가 올린 SmartDoctor.Util이 뜬다.
 
-![Untitled](/assets/github_packages_16.png)
+![Untitled](/assets/images/github_packages_16.png)
 
-![Untitled](/assets/github_packages_17.png)
+![Untitled](/assets/images/github_packages_17.png)
 
 굿
 
@@ -330,7 +330,7 @@ submodule을 해제하고 나면 이렇게 참조가 없어서 오류가 뜬다.
 아니면 빌드해서 오류나는 곳에 넣고
 
 
-![Untitled](/assets/github_packages_18.png)
+![Untitled](/assets/images/github_packages_18.png)
 
 ### conflict 처리
 
@@ -342,7 +342,7 @@ TODO
 
 소문자로 한거 다 대문자로 등등
 
-![Untitled](/assets/github_packages_19.png)
+![Untitled](/assets/images/github_packages_19.png)
 
 동네방네 찾아다니면서 다 참조 걸자.
 
@@ -352,7 +352,7 @@ add reference missing file 기능 활용 (왼쪽 전구)
 
 프로젝트 하면 프로젝트만 하고 솔루션 하면 다해준다.
 
-![Untitled](/assets/github_packages_20.png)
+![Untitled](/assets/images/github_packages_20.png)
 
 개꿀팁
 
