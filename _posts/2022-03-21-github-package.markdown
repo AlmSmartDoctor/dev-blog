@@ -3,6 +3,7 @@ layout: post
 title:  "Git Submodule to Nuget Package"
 date:   2022-03-21 15:25:29 +0900
 categories: jekyll update
+author: calvin310486
 ---
 
 # Git Submodule → Nuget Package
