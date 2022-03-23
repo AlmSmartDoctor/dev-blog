@@ -23,12 +23,27 @@ layout: base
                   <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&repo={{ gh_repo }}&type=watch&v=2&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
                 {% when 'fork'%}
                   <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&repo={{ gh_repo }}&type=fork&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
-                {% when 'follow'%}
-                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&type=follow&count=true" frameborder="0" scrolling="0" width="220px" height="20px"></iframe>
               {% endcase %}
             {% endfor %}
           {% endif %}
         </div>
+      {% endif %}
+      
+      {% if page.gh-user %}
+        {% if page.gh-user.size > 0 %}
+          {% for user in page.gh-user %}
+            <div id="header-gh-btns">
+              {% if page.gh-badge.size > 0 %}
+                {% for badge in page.gh-badge %}
+                  {% case badge %} 
+                    {% when 'follow'%}
+                      <iframe src="https://ghbtns.com/github-btn.html?user={{ user }}&type=follow&count=true" frameborder="0" scrolling="0" width="220px" height="20px"></iframe>
+                  {% endcase %}
+                {% endfor %}
+              {% endif %}
+            </div>
+          {% endfor %}
+        {% endif %}
       {% endif %}
 
       {% if page.before-content %}
