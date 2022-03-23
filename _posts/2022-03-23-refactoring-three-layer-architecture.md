@@ -45,7 +45,7 @@ Entity Layer : 3개의 계층에서 요청을 보내고 결과를 받을 수 있
 
 5. Presentation Layer는 응답을 받고 유저에게 UI를 통해 표현한다.
 
-![data flow](https://media.enlabsoftware.com/wp-content/uploads/2021/05/12224620/3Layer.jpg)
+![data flow](https://media.enlabsoftware.com/wp-content/uploads/2021/05/12224620/3Layer.jpg){: .mx-auto.d-block :}
 
 ### CRM 프로젝트 구조 변경
 
