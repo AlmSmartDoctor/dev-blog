@@ -38,7 +38,7 @@ token의 scope는 write:packages와 read:packages를 선택한다.
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
     <packageSources>
-        <add key="github" value="<http://nuget.pkg.github.com/OWNER/index.json>" />
+        <add key="github" value="http://nuget.pkg.github.com/OWNER/index.json" />
     </packageSources>
     <packageSourceCredentials>
         <github>
