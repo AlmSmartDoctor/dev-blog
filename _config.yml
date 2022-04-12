@@ -10,11 +10,9 @@ author: calvin310486
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  About Me: "aboutme"
-  Resources:
-    - notimplemented1: "notimplemented"
-    - notimplemented2: "notimplemented"
-  notimplemented3: "notimplemented"
+  🏠HOME: "aboutme"
+  ✏️POSTS: "notimplemented"
+  📓CATEGORIES: "categories"
 
 # --- Logo --- #
 
@@ -97,8 +95,8 @@ post_search: true
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
-navbar-col: "#EAEAEA"
-navbar-text-col: "#404040"
+navbar-col: "#FFFFFF"
+navbar-text-col: "#713BEC"
 navbar-border-col: "#DDDDDD"
 page-col: "#FFFFFF"
 text-col: "#404040"
