@@ -6,6 +6,9 @@ gh-repo: 6unpk/myrepository
 gh-badge: [follow]
 tags: [Spring Boot, Decroator]
 comments: true
+sitemap:
+  changefreq: daily
+  priority : 1.0
 ---
 
  안녕하세요 스마트닥터의 벡엔드 개발을 맡고 있는 박준우입니다. 데코레이터 패턴을 실제로 도메인 지식과 결합하여 어떻게 해결했는지 살펴보도록 합시다.

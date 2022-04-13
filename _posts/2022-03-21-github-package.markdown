@@ -6,6 +6,9 @@ gh-repo: calvin310486/myrepository
 gh-badge: [follow]
 tags: [Github Package]
 comments: true
+sitemap:
+  changefreq: daily
+  priority : 1.0
 ---
 
 기존 사내에서 사용하던 Git Submodule 공통 모듈을 C#에서 제공하는 Nuget Package로 이관했던 경험을 나누고자 한다.
