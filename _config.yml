@@ -10,7 +10,7 @@ author: calvin310486
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  🏠HOME: "aboutme"
+  🏠ABOUT ME: "aboutme"
   ✏️POSTS: "notimplemented"
   📓CATEGORIES: "categories"
 
