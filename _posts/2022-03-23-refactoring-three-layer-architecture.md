@@ -49,19 +49,66 @@ Entity Layer : 3개의 계층에서 요청을 보내고 결과를 받을 수 있
 
 ### CRM 프로젝트 구조 변경
 
-Presenter는 왜 추가로 넣었는지? 왜 필요한지? 역할?
+Q: Presenter는 왜 추가로 넣었는지? 왜 필요한지? 역할?
 
-DAL위에 SystemCommon은 왜 최상위에 있는지?
+A: PL은 사용자가 서버에 요청을 하게 되면 PL에서 받게된다 그리고 그 데이터를 다시 사용자에게 보여준다.
+즉 사용자와 데이터 베이스 간에 상호작용을 담당한다.
+또한 presenter은 MVC 패턴에 Controler와 본질적으로는 같지만 Controler와는 다르게 view가 아닌 interface에 연결이된다. 
+view가 아닌 interface로 연결이 되어 있기 때문에 테스트가 가능하며 모듈화가 가능해진다.
 
-프로젝트 구조를 위해 어떤 proj에서 뭘 지우고 참조를 어떻게 했는지?
+Presenter에 기본적인 역할은 이러하다
+1. Client의 요청을 변환
+2. 기본적인 요청 내용 검증
+3. 수행결과를 Client에 반환
 
-무슨 프로젝트를 DAL, BLL, PL 중 어디로 보냈는지?
 
-OLD폴더는 뭔지?
+Q: DAL위에 SystemCommon은 왜 최상위에 있는지?
 
-변경 전 프로젝트 구조 사진, 변경 후 사진 reshaper show project dependency diagram 로 추가?
+A: systemCommon에 있는 iniHandler를 DAL에 있는 DbConfig가 사용을 해야 했으며 
+IEnumerableExtensions을 repository에서 사용을 하고 있으므로 systemCommon이 최상위에 존재해야한다.
+또한 systemcommon은 변경이 잘 이루어지지 않고 패키지로 변경될 가능성이 많은 코드이기 때문에 다른 곳에 참조를 걸경우 패키지화하기 불편해진다.
 
-Local Model, PL <-> BLL 을 할 때 Entity Layer 대신 다른 Layer 가 왜 필요한 지?
+Q: 프로젝트 구조를 위해 어떤 proj에서 뭘 지우고 참조를 어떻게 했는지?
+
+1. PL과 BLL, DAL, EL, Queries를 만들기 
+2. Layer에 맞는 부분으로 class이동
+3. 참조 정리
+4. 네임스페이스 변경
+5. 반복
+
+Q: 무슨 프로젝트를 DAL, BLL, PL 중 어디로 보냈는지?
+
+A: 
+1.PL
+PL은 모든 view(Popup프로젝트와 UC가 있는 프로젝트)들을 전부 PL안에 Old 폴더를 생성하여 넣어주었다.
+
+2.DAL
+DAL은 dbConfig, EF에서 Context, Repository를 넣어주었으며 기존에 있던 systemCommon에 userInfo를 새롭게 만들어 주었다.
+
+3.BLL
+BLL은 DAL과 PL간에 데이터를 교환을 위한 중개자 역할을 하는 중개자로 view에서 Data들과 상호작용하는 부분을 BLL로 만들었다.
+ex) Handler 프로젝트, AlmightyControlLibrary 등
+
+Q: OLD폴더는 뭔지?
+
+A: old 폴더는 PL안에있는 폴더로 MVP 패턴을 적용하기 전에 view들을 모아둔 폴더 이다.
+
+
+Q: 변경 전 프로젝트 구조 사진, 변경 후 사진 reshaper show project dependency diagram 로 추가?
+
+A: 
+변경전
+![old](https://user-images.githubusercontent.com/68680118/164355591-f246621d-f72e-4d2c-85db-97e4fc57581c.png)
+
+변경후
+![new](https://user-images.githubusercontent.com/68680118/164355583-563bcdb8-c74d-4392-9e08-0e03f0481c31.png)
+
+Q: Local Model, PL <-> BLL 을 할 때 Entity Layer 대신 다른 Layer 가 왜 필요한 지?
+
+A: 
+gridView에 entity를 그대로 넣을 경우 사용자가 entity를 바꿀 수 있게 되어 사용자가 직접 데이터를 바꿀 수 없게 하기 위하여 entity를 그대로 사용하지 않고,
+하나의 모델을 만들어서 사용해야한다.
+
 
 ### CRM data flow example
 
