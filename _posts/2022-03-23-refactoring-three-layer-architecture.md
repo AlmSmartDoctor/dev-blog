@@ -106,12 +106,6 @@ A:
 Q: Local Model, PL <-> BLL 을 할 때 Entity Layer 대신 다른 Layer 가 왜 필요한 지?
 
 A: 
-첫번째 이유는 
-PL에서 사용하는 gridView에 데이터를 넣을 때 filedName으로 매칭을 하는데 popupHandler로 popup을 열었을 경우에는 filedName을 column name으로 만들어 준다.
-column name을 자동으로 만들어 주기 때문에 gridView에 데이터를 넣을때 entity 변수명으로 매칭을 하지 못하게 된다. 
-그러므로 gridView에 넣기 위한 모델을 만들어서 매칭을 시켜준다.
-
-두번째 이유는 
 gridView에 entity를 그대로 넣을 경우 사용자가 entity를 바꿀 수 있게 되어 사용자가 직접 데이터를 바꿀 수 없게 하기 위하여 entity를 그대로 사용하지 않고,
 하나의 모델을 만들어서 사용해야한다.
 
