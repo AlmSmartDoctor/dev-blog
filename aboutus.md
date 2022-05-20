@@ -1,10 +1,10 @@
 ---
 layout: page
-title: About us
-subtitle: notimplemented
+title: SmartDoctor
+subtitle: aboutus
 ---
 
-### Error
+안녕하세요. 스마트닥터의 개발팀입니다.
 
-{: .box-error}
-**Error:** notimplemented
+<!--TODO 뭐라고 적을까요-->
+수많은 미디어, 커뮤니티, 블로그 등의 콘텐츠, 행동 기록을 다루는 대용량 데이터 처리, 머신러닝/딥러닝 등을 활용한 사용자 관심사 분석 및 추출, 거대한 트래픽을 다루고 빠르고 안정적으로 서비스하기 위한 인프라, 각 고객사 서비스의 콘텐츠, UI에 최적화되어 최대의 성과를 창출할 수 있는 프론트엔드 기술과 A/B 테스트 플랫폼 등 그동안 데이블 개발팀이 축적한, 그리고 만들어나갈 이야기들을 풀어내는 블로그를 운영하고자 합니다.
