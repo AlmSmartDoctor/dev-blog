@@ -13,7 +13,6 @@ sitemap:
 
 # # Content
 
-- [# Content](#-content)
 - [# Case of Application](#-case-of-application)
   - [No type casting, use type predicates](#no-type-casting-use-type-predicates)
   - [`QuestionnaireType` - type manipulation](#questionnairetype---type-manipulation)
