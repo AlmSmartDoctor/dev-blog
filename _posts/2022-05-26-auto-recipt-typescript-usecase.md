@@ -382,6 +382,7 @@ interface Foo { foo: never; }
 ![meme-typescript-autoplugin.png]({{ site.baseurl }}/assets/images/auto_recipt_typescript_usecase/meme-typescript-autoplugin.png)
 
 위 이미지는 `타입스크립트는 자동완성 플러그인`이라는 유명한 밈이다. 이번에는 자동완성을 활용하는 방법에 대해 얘기한다.
+
 P.S. 개발환경에 따라 자동완성 여부는 달라질 수 있다. 본 내용은 [타입스크립트 플레이그라운드](https://www.typescriptlang.org/play)에서  확인했다.
 
 **Definition**
