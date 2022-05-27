@@ -412,7 +412,6 @@ const ofMap =
 **Solution1**
 
 ```ts
-const cssObject = of<CSSObject>();
 const buttonStyle = (variant: 'large' | 'small'): CSSObject => ({
   color: 'black',
   backgroundColor: 'white',
