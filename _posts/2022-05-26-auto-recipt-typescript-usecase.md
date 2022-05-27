@@ -525,7 +525,7 @@ const colorsWithCreateColors = createColors({ ... } as const);
 
 **Extra**
 
-위의 예시를 보면 `ofMap` 함수의 인자에 `as const`가 붙어있는 것을 확인할 수 있다. 일반적인 경우, `as const`가 없어도 `value`의 `type` 검사와 `key`의 자동완성에 이상없다. `as const`는 `value`를 `literal type`으로 쓰기 위해 사용한다.
+위의 예시를 보면 `ofMap` 함수의 인자에 `as const`가 붙어있는 것을 확인할 수 있다. 일반적인 경우, `as const`가 없어도 `value`의 `type` 검사와 `key`의 자동완성에 이상 없다. `as const`는 `value`를 `literal type`으로 쓰기 위해 사용한다.
 
 ```jsx
 const peopleMap = ofMap<{
