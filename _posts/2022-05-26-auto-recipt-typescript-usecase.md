@@ -348,7 +348,7 @@ declare module '@mui/material/styles' {
 }
 ```
 
-타입스크립트의 `interface`는 같은 이름으로 여러 번 정의될 수 있으며 각기 다른 파일에 정의되어도 괘찮다. 그리고 해당 `interface`는 각 정의들의 교집합이 된다. 이 점을 이용하여 `package`에 정의된 `interface`에 원하는 속성을 추가할 수 있다. 자동접수에서는 `emotion`의 `Theme`과 `mui`의 `variant`에 원하는 속성을 추가하여 사용하고 있다. 자세한 사용법은 `mui` 공식 문서에서 확인하기 바란다.
+타입스크립트의 `interface`는 같은 이름으로 여러 번 정의될 수 있으며 각기 다른 파일에 정의되어도 괜찮다. 그리고 해당 `interface`는 각 정의들의 교집합이 된다. 이 점을 이용하여 `package`에 정의된 `interface`에 원하는 속성을 추가할 수 있다. 자동접수에서는 `emotion`의 `Theme`과 `mui`의 `variant`에 원하는 속성을 추가하여 사용하고 있다. 자세한 사용법은 `mui` 공식 문서에서 확인하기 바란다.
 
 - [theming - custom variables](https://mui.com/customization/theming/#custom-variables)
 - [typography - adding & disabling variants](https://mui.com/customization/typography/#adding-amp-disabling-variants)
