@@ -58,7 +58,7 @@ token의 scope는 write:packages와 read:packages를 선택한다.
 
 특정 solution에만 Nuget.config를 적용하고 싶다면 .sln파일과 같은 폴더에 Nuget.config파일을 생성하면 된다.
 
-사전 설정을 마치면 기존 git submodule에서 원하는 부분을 nuget package로 변경할 수 있다.
+사전 설졍를 마치면 기존 git submodule에서 원하는 부뷴을 nuget package로 변경할 수 있다.
 
 이번에는 모바일 파트에서 주로 사용하는 repository SmartMQ, SmartChartServer에서 공통으로 사용하는 SystemCommon/DataHandle/NetworkUtil.cs를 이관하기로 했다.
 
@@ -98,7 +98,7 @@ package 이름은 프로젝트 이름을 따라가기 때문에 다른 사람이
 
 기존 SystemCommon/DataHandle/NetworkUtil.cs를 복사해서 SomeNamespace.Util 으로 복사한다.
 
-추후 참조를 통해 사용할 것을 생각해 사용할 class, method를 public으로 열어두는 것 정도를 고려한다.
+추후 참 조 를 통해 사용할 것을 생각헤 사용 할 class, method를 public으로 열어두는 것 정도를 고려한다.
 
 ### Package 생성 및 배포
 
@@ -118,7 +118,7 @@ dotnet pack --configuration Release
 
 프로젝트 이름(SomeNamespace.Util) + 버전(1.0.0) + .nupkg 로 생성된 것을 알 수 있다.
 
-해당 파일을 배포한다.
+해당 파일을 배표한다.
 
 ```powershell
 dotnet nuget push .\SmartDoctor.Util.1.0.0.nupkg --source "github"
