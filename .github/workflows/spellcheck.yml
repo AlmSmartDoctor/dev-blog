@@ -1,0 +1,12 @@
+name: spellcheck
+
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: "맞춤법 검사"
+      uses: jckdotim/korean-grammar-action@v0.2.6
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
