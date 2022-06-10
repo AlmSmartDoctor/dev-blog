@@ -114,7 +114,7 @@ function isFooBar(something: unknown): something is FooBar {
 }
 ```
 
-자동접수에서는 `type predicates`를 이용하여 `event.target.value`의 `type`을 추론한다. 형변환에 비해 보일러 플레이트가 많지만, 그만큼 안전한 코드를 작성 할 수 있다. 타입스크립트는 컴파일타임에만 작동하기 때문에 실제로 다른 `type`의 값이 전달될 수 있으며, 따라서 무리한 형변환은 오히려 버그를 찾기 어렵고 개발자를 헷갈리게 한다. 얽혀있는 내용이 많다면 형변환 대신 `type predicates` 함수를 사용하는 것을 권장하며, <자동접수>는 대부분의 상황에서 `type predicates` 함수를 사용한다. `type predicates`의 내용은 [링크](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#using-type-predicates)에서 확인하길 바라며, `type predicates` 뿐만 아니라 `narrowing` 챕터에서 `type`을 추론하는 내용을 다루고 있으니 읽어보는 것을 추천한다.
+\<자동접수\>에서는 `type predicates`를 이용하여 `event.target.value`의 `type`을 추론한다. 형변환에 비해 보일러 플레이트가 많지만, 그만큼 안전한 코드를 작성할 수 있다. 타입스크립트는 컴파일 타임에만 작동하기 때문에 실제로 다른 `type`의 값이 전달될 수 있으며, 따라서 무리한 형변환은 오히려 버그를 찾기 어렵고 개발자를 헷갈리게 한다. 얽혀있는 내용이 많다면 형변환 대신 `type predicates` 함수를 사용하는 것을 권장하며, \<자동접수\>는 대부분의 상황에서 `type predicates` 함수를 사용한다. `type predicates`의 내용은 [링크](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#using-type-predicates)에서 확인하길 바라며, `type predicates` 뿐만 아니라 `narrowing` 챕터에서 `type`을 추론하는 내용을 다루고 있으니 읽어보는 것을 추천한다.
 
 
 ## `QuestionnaireType` - type manipulation
@@ -346,7 +346,7 @@ declare module '@mui/material/styles' {
 }
 ```
 
-타입스크립트의 `interface`는 같은 이름으로 여러 번 정의될 수 있으며 각기 다른 파일에 정의되어도 괜찮다. 그리고 해당 `interface`는 각 정의들의 교집합이 된다. 이 점을 이용하여 `package`에 정의된 `interface`에 원하는 속성을 추가할 수 있다. 자동접수에서는 `emotion`의 `Theme`과 `mui`의 `variant`에 원하는 속성을 추가하여 사용하고 있다. 자세한 사용법은 `mui` 공식 문서에서 확인하기 바란다.
+타입스크립트의 `interface`는 같은 이름으로 여러 번 정의될 수 있으며 각기 다른 파일에 정의되어도 괜찮다. 그리고 해당 `interface`는 각 정의들의 교집합이 된다. 이 점을 이용하여 `package`에 정의된 `interface`에 원하는 속성을 추가할 수 있다. \<자동접수\>에서는 `emotion`의 `Theme`과 `mui`의 `variant`에 원하는 속성을 추가하여 사용하고 있다. 자세한 사용법은 `mui` 공식 문서에서 확인하기 바란다.
 
 - [theming - custom variables](https://mui.com/customization/theming/#custom-variables)
 - [typography - adding & disabling variants](https://mui.com/customization/typography/#adding-amp-disabling-variants)
@@ -399,7 +399,7 @@ const ofMap =
     map;
 ```
 
-자동접수에서는 자동완성과 `type` 검사를 위해 `of`와 `ofMap`이라는 함수를 정의해서 사용한다. 둘의 공통점은 어떤 인자를 받아서 그대로 반환한다는 것이다. 즉, 이 함수들의 사용유무는 실행 결과에 영향을 미치지 않는다. 아래 문제를 통해 역할을 알아보자.
+\<자동접수\>에서는 자동완성과 `type` 검사를 위해 `of`와 `ofMap`이라는 함수를 정의해서 사용한다. 둘의 공통점은 어떤 인자를 받아서 그대로 반환한다는 것이다. 즉, 이 함수들의 사용 유무는 실행 결과에 영향을 미치지 않는다. 아래 문제를 통해 역할을 알아보자.
 
 ### `of` 함수
 
