@@ -450,7 +450,7 @@ const buttonStyle = (variant: 'large' | 'small'): CSSObject => ({
 
 ### `ofMap` 함수
 
-`ofMap` 함수는 `of` 함수처럼 전달 받은 인자를 그대로 반환하지만, 반환 `type`에서 차이를 보인다. `of` 함수는 `type`도 똑같이 반환하지만, `ofMap` 함수는 입력된 타입을 `extends`하는 `type`을 반환한다. 즉, 전달 받는 인자의 `type`은 `Record<string, T>`만 만족하면 되고 반환형은 이를 `extends`하는 `type`으로 많은 상황에서 `literal type`이 되어 강력한 자동완성 기능을 제공한다. 아래 문제를 보며 차이를 살펴보자.
+`ofMap` 함수는 `of` 함수처럼 전달받은 인자를 그대로 반환하지만, 반환 `type`에서 차이를 보인다. `of` 함수는 `type`도 똑같이 반환하지만, `ofMap` 함수는 입력된 타입을 `extends`하는 `type`을 반환한다. 즉, 전달받는 인자의 `type`은 `Record<string, T>`만 만족하면 되고 반환형은 이를 `extends`하는 `type`으로 많은 상황에서 `literal type`이 되어 강력한 자동완성 기능을 제공한다. 아래 문제를 보며 차이를 살펴보자.
 
 **Problem**
 
